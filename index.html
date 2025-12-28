@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es-DO" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kuponi - App de Ofertas y Cupones en República Dominicana</title>
+    <meta name="description"
+        content="Descarga Kuponi y ahorra dinero con cupones exclusivos en restaurantes, tiendas y servicios en Santo Domingo y todo RD. Tu repositorio de ofertas móvil.">
+    <meta name="keywords"
+        content="cupones rd, ofertas santo domingo, descuentos republica dominicana, app de ofertas, kuponi, ahorrar dinero">
+    <meta name="author" content="Kuponi App">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kuponi.app/">
+    <meta property="og:title" content="Kuponi - Las mejores ofertas en tu bolsillo">
+    <meta property="og:description" content="Descarga la app y descubre miles de descuentos cerca de ti.">
+    <meta property="og:image" content="https://i.ibb.co/KzQ3CxtZ/kuponi-App-Mokup.png">
+
+    <link rel="icon" type="image/png" href="https://i.ibb.co/mrS8KYr2/icon-only.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Kuponi",
+      "operatingSystem": "ANDROID, IOS",
+      "applicationCategory": "ShoppingApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "DOP"
+      },
+      "description": "Aplicación para encontrar y canjear cupones de descuento en República Dominicana."
+    }
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: {
+                        primary: '#ff7a00',
+                        secondary: '#222428',
+                        tertiary: '#ff9f40',
+                        light: '#fffcf9',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-light text-secondary font-sans antialiased flex flex-col min-h-screen overflow-x-hidden">
+
+    <header class="relative bg-white border-b border-gray-100 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <a href="index.html" class="flex-shrink-0 transition hover:opacity-90">
+                    <img src="https://i.ibb.co/pjddLkvy/logo-Kuponi.png" alt="Kuponi Logo Oficial"
+                        class="h-12 md:h-16 w-auto">
+                </a>
+
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-primary font-bold">Inicio</a>
+                    <a href="politica.html"
+                        class="text-secondary hover:text-primary font-medium transition">Privacidad</a>
+                    <a href="contacto.html" class="text-secondary hover:text-primary font-medium transition">Soporte</a>
+                    <a href="index.html#descargar"
+                        class="bg-secondary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-primary transition transform  duration-200">
+                        Descargar App
+                    </a>
+                </nav>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-secondary text-3xl p-2 focus:outline-none"
+                        aria-label="Abrir menú">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu-backdrop"
+        class="fixed inset-0 bg-secondary/60 backdrop-blur-sm z-40 hidden transition-opacity duration-300 opacity-0">
+    </div>
+    <div id="mobile-menu-panel"
+        class="fixed top-0 right-0 w-[80%] max-w-sm h-full bg-white z-50 transform translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
+        <div class="p-6 flex justify-between items-center border-b border-gray-100">
+            <img src="https://i.ibb.co/pjddLkvy/logo-Kuponi.png" alt="Kuponi" class="h-10">
+            <button id="close-menu-btn"
+                class="text-secondary text-2xl w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="flex flex-col p-6 space-y-6 text-lg font-medium">
+            <a href="index.html" class="text-primary flex items-center"><i class="fa-solid fa-home w-8"></i> Inicio</a>
+            <a href="politica.html" class="text-secondary hover:text-primary flex items-center transition"><i
+                    class="fa-solid fa-shield-halved w-8"></i> Privacidad</a>
+            <a href="contacto.html" class="text-secondary hover:text-primary flex items-center transition"><i
+                    class="fa-solid fa-headset w-8"></i> Soporte</a>
+            <hr class="border-gray-100">
+            <a href="#descargar" class="bg-primary text-white text-center py-3 rounded-xl shadow-lg shadow-primary/30">
+                Descargar App
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <section class="py-12 md:py-24 overflow-hidden relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+
+                    <div class="text-center lg:text-left order-2 lg:order-1 relative z-10">
+                        <div
+                            class="inline-flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-full mb-6 border border-orange-100">
+                            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            <span class="text-primary font-bold uppercase text-xs tracking-widest">Nuevas Ofertas
+                                Diarias</span>
+                        </div>
+
+                        <h1
+                            class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-secondary tracking-tight">
+                            Ahorra a lo grande con <span class="text-primary relative inline-block">
+                                Kuponi
+                                <svg class="absolute w-full h-3 -bottom-1 left-0 text-tertiary opacity-40"
+                                    viewBox="0 0 200 9" fill="currentColor">
+                                    <path d="M2.00025 6.99999C28.4959 3.0189 123.472 -2.18182 197.975 3.99999"
+                                        stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                                </svg>
+                            </span>
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                            La app para República Dominicana para descubrir descuentos. Conecta con tus negocios
+                            favoritos y cuida tu bolsillo.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#"
+                                class="group flex items-center bg-secondary text-white px-6 py-3.5 rounded-xl hover:bg-gray-800 transition  w-full sm:w-auto justify-center sm:justify-start transform hover:-translate-y-1">
+                                <i
+                                    class="fa-brands fa-google-play text-3xl mr-3 group-hover:text-primary transition-colors"></i>
+                                <div class="text-left leading-tight">
+                                    <div class="text-[10px] uppercase opacity-70">Disponible en</div>
+                                    <div class="font-bold text-lg">Google Play</div>
+                                </div>
+                            </a>
+                            <a href="#"
+                                class="group flex items-center bg-secondary text-white px-6 py-3.5 rounded-xl hover:bg-gray-800 transition  w-full sm:w-auto justify-center sm:justify-start transform hover:-translate-y-1">
+                                <i
+                                    class="fa-brands fa-apple text-4xl mr-3 group-hover:text-primary transition-colors pb-1"></i>
+                                <div class="text-left leading-tight">
+                                    <div class="text-[10px] uppercase opacity-70">Consíguelo en</div>
+                                    <div class="font-bold text-lg">App Store</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="relative order-1 lg:order-2 flex justify-center lg:justify-end">
+                        <div
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bg-gradient-to-tr from-primary/20 to-tertiary/20 rounded-full blur-3xl -z-10">
+                        </div>
+
+                        <img src="https://i.ibb.co/KzQ3CxtZ/kuponi-App-Mokup.png"
+                            alt="Captura de pantalla de la App Kuponi mostrando ofertas"
+                            class="w-[280px] sm:w-[350px] lg:w-[400px] drop-shadow-2xl transform hover:scale-105 transition duration-700 ease-out">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-secondary">¿Cómo funciona Kuponi?</h2>
+                    <div class="w-20 h-1.5 bg-primary mx-auto mt-4 rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="p-8 hover:bg-light rounded-3xl transition duration-300">
+                        <div
+                            class="w-20 h-20 bg-orange-50 text-primary rounded-full flex items-center justify-center text-3xl mx-auto mb-6 shadow-sm">
+                            <i class="fa-solid fa-search"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-secondary">1. Explora</h3>
+                        <p class="text-gray-500 leading-relaxed">Busca ofertas y descuentos, encuentra tu negocio
+                            favorito</p>
+                    </div>
+                    <div class="p-8 hover:bg-light rounded-3xl transition duration-300">
+                        <div
+                            class="w-20 h-20 bg-orange-50 text-primary rounded-full flex items-center justify-center text-3xl mx-auto mb-6 shadow-sm">
+                            <i class="fa-solid fa-ticket"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-secondary">2. Elige tu Cupón</h3>
+                        <p class="text-gray-500 leading-relaxed">Selecciona la oferta que más te guste. ¡Es gratis y no
+                            necesitas pagar por adelantado!</p>
+                    </div>
+                    <div class="p-8 hover:bg-light rounded-3xl transition duration-300">
+                        <div
+                            class="w-20 h-20 bg-orange-50 text-primary rounded-full flex items-center justify-center text-3xl mx-auto mb-6 shadow-sm">
+                            <i class="fa-regular fa-face-smile-wink"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-secondary">3. Canjea y Disfruta</h3>
+                        <p class="text-gray-500 leading-relaxed">Muestra el código QR en el negocio desde tu celular y
+                            recibe tu descuento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="descargar" class="py-20 bg-light border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-secondary mb-4">Descarga Kuponi Gratis</h2>
+                <p class="text-gray-500 mb-10 max-w-xl mx-auto">Únete a miles de usuarios que ya están ahorrando en sus
+                    salidas y compras diarias.</p>
+
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="#"
+                        class="flex items-center bg-primary text-white px-8 py-4 rounded-2xl hover:bg-tertiary transition w-full sm:w-auto justify-center transform hover:-translate-y-1">
+                        <i class="fa-brands fa-google-play text-4xl mr-4"></i>
+                        <div class="text-left">
+                            <div class="text-xs uppercase opacity-90 font-semibold">Disponible en</div>
+                            <div class="text-2xl font-bold">Google Play</div>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="flex items-center bg-secondary text-white px-8 py-4 rounded-2xl hover:bg-gray-800 transition w-full sm:w-auto justify-center transform hover:-translate-y-1">
+                        <i class="fa-brands fa-apple text-5xl mr-4 pb-1"></i>
+                        <div class="text-left">
+                            <div class="text-xs uppercase opacity-90 font-semibold">Consíguelo en</div>
+                            <div class="text-2xl font-bold">App Store</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <img src="https://i.ibb.co/pjddLkvy/logo-Kuponi.png" alt="Kuponi Logo Footer"
+                class="h-20  mx-auto mb-8 opacity-90">
+
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-10 text-sm font-semibold text-gray-500">
+                <a href="index.html" class="hover:text-primary transition">Inicio</a>
+                <a href="politica.html" class="hover:text-primary transition">Política de Privacidad</a>
+                <a href="contacto.html" class="hover:text-primary transition">Soporte</a>
+            </div>
+
+            <a href="https://www.instagram.com/kuponird/" target="_blank" aria-label="Instagram"
+                class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-50 text-gray-400 hover:text-white hover:bg-primary  from-yellow-500 via-red-500 to-purple-500 text-2xl transition duration-300 shadow-sm">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <p class="text-gray-400 text-xs mt-8">© 2026 Kuponi. Desarrollado en
+                República Dominicana 🧡.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const menuPanel = document.getElementById('mobile-menu-panel');
+        const backdrop = document.getElementById('mobile-menu-backdrop');
+        const menuLinks = menuPanel.querySelectorAll('a');
+
+        function openMenu() {
+            backdrop.classList.remove('hidden');
+            // Timeout pequeño para permitir que la transición de opacidad ocurra
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                menuPanel.classList.remove('translate-x-full');
+            }, 10);
+        }
+
+        function closeMenu() {
+            menuPanel.classList.add('translate-x-full');
+            backdrop.classList.add('opacity-0');
+
+            // Esperar a que termine la animación para ocultar el div
+            setTimeout(() => {
+                backdrop.classList.add('hidden');
+            }, 300);
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        backdrop.addEventListener('click', closeMenu);
+
+        // Cerrar menú al hacer click en un enlace
+        menuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
+</body>
+
+</html>
